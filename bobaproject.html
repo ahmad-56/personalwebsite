@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Website</title>
+</head>
+<body>
+    <header>            
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About Me</a></li>
+                <li><a href="#experience" class="nav-item">Experiences</a></li>
+                <li><a href="#contact" class="nav-item">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>        
+    
+    <main>
+        <div class="container">
+            <div class="content" id="home">
+                <h1>Hello World!</h1>
+                <h2>Hi, my name is Ahmad.</h2>
+                <p>Hey everyone! I’m thrilled to finally share my website with you. It’s a place I’ve been working on for a while, and I can’t wait for you all to check it out. Feel free to explore, browse around, and see what catches your eye. Thanks for visiting, and I hope you enjoy your visit!</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content" id="about">
+                <h1>About Me!</h1>
+                <h2>Where do I live?</h2>
+                <p>I am from Lahore, Pakistan</p>
+                <h2>What do I like?</h2>
+                <p>Hi there! I’m thrilled to share a bit about myself. I am a High school student currently studying in O Levels (equivalent to 10th Grade). I have a strong passion for programming and enjoy exploring new ideas and projects. Other than coding I am a sports enthusiast. I enjoy following the English Premier League, and I support Liverpool Football Club.  Additionally, I also like to watch cricket, and of course, Pakistan is my favorite team. This space reflects my enthusiasm for coding. I am also into media and photography, one of my favourite pictures (taken by me ofcourse) were of the moon due to its amazing nature and of our school campus, which you can see below <a link href="#img">here<a>. Thank you for visiting, Enjoy! 
+                  <br>
+                  <br>
+
+                <div class="slideshow-container" id="img">                    
+                    <div class="slide">
+                        <img src="DSC_0311.JPG" style="width:100%">
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="DSC_0093.JPG" style="width:100%">
+                    </div>
+                                        
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+            </p>
+            </div>
+        </div>
+        <br>        
+        <div class="container2">
+            <div class="content2" id="experience">
+                <h2>Past Experiences!</h2>
+                <h3>Projects I have worked on:</h3>
+                <p>My past experience and projects revolve around my passion for coding. After learning basic HTML and CSS, I made a website for a cricket league – of me and my cousins. This website was never published online but gave me great experience and helped increase my passion for coding. Recently I started making the website for a community service event held by our school. However this project is delayed until further notice due to cancellation of the event.</p>
+            </div>
+            <div class="content2" id="contact">
+                <h2>Contact Me!</h2>
+                <h3>My Gmail:</h3>
+                <address>
+                    Written by <a href="mailto:ahmad392.hassan@gmail.com">Ahmad Hassan</a>.<br> 
+                    Email me at:<br>
+                    ahmad392.hassan@gmail.com<br>
+                    Lahore,<br>
+                    Pakistan
+                </address>
+            </div>
+        </div>        
+    </main>
+    <br>
+    <br>
+
+    <div class="footer">
+        <footer>
+            <p>© 2024 Personal Website | Designed by Ahmad Hassan | All rights reserved.</p>
+        </footer>
+    </div>
+    
+
+<script>
+
+let slideIndex = 1;
+
+showSlide(slideIndex);
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+    
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+</script>
+</body>
+</html>
