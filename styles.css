@@ -16,7 +16,9 @@ header {
     z-index: 1000;
     padding: 15px 0;
 }
-
+div {
+    width: 100%;
+}
 .nav-bar ul {
     list-style-type: none;
     padding: 0;
